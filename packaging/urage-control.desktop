@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=uRage Control
+Comment=Set the lighting color on a supported uRage mouse
+Exec=urage-gui
+Icon=urage-control
+Terminal=false
+Categories=Utility;Settings;
+Keywords=mouse;lighting;color;
+StartupNotify=true

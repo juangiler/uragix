@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+extend-exclude = ["mouse_color.py"]
+
+[tool.black]
+extend-exclude = """
+/mouse_color.py
+"""
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
