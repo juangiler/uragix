@@ -1,5 +1,10 @@
 # uRage Control
 
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![Checks](https://img.shields.io/badge/checks-scripts%2Frun__ci.sh-informational)](scripts/run_ci.sh)
+![Project status: in development](https://img.shields.io/badge/status-in%20development-yellow)
+![License: not specified](https://img.shields.io/badge/license-not%20specified-lightgrey)
+
 uRage Control sets one uniform lighting color on the supported uRage mouse.
 Run its CLI and desktop interface directly from the repository with the
 launcher scripts. The project itself does not need to be installed; PyUSB and
