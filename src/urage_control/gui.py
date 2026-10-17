@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import sys
 from collections.abc import Sequence
+from pathlib import Path
 
 from PySide6.QtCore import QObject, Qt, QThread, QTimer, Signal, Slot
-from PySide6.QtGui import QCloseEvent, QColor
+from PySide6.QtGui import QCloseEvent, QColor, QIcon
 from PySide6.QtWidgets import (
     QApplication,
     QFrame,
@@ -91,6 +92,11 @@ QPushButton:focus { outline: none; }
 QSlider:focus { outline: 1px solid #91a9d1; }
 """
 
+APP_ICON_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "packaging/icons/hicolor/scalable/apps/urage-control.svg"
+)
+
 
 class _DeviceWorker(QObject):
     """Run one potentially blocking device operation outside the UI thread."""
@@ -141,6 +147,7 @@ class ColorControlWindow(QMainWindow):
         self._spinboxes: list[QSpinBox] = []
 
         self.setWindowTitle("uRage Control")
+        self.setWindowIcon(QIcon(str(APP_ICON_PATH)))
         self.setMinimumSize(500, 590)
         self.resize(560, 660)
         self.setStyleSheet(APP_STYLESHEET)

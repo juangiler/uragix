@@ -126,6 +126,13 @@ def test_window_starts_and_reports_missing_device_without_hardware(app):
     close_window(app, window)
 
 
+def test_window_uses_project_application_icon(app):
+    window = make_window(app, fake_device())
+
+    assert not window.windowIcon().isNull()
+    close_window(app, window)
+
+
 def test_apply_runs_once_in_background_and_reports_the_applied_selection(app):
     started = Event()
     finish = Event()
